@@ -1,5 +1,5 @@
 module "consul_sofia" {
-  source = "github.com/chavo1/terraform-aws-consul-2dc"
+  source = "github.com/chavo1/aws-consul-terraform"
 
   access_key    = "${var.access_key}"
   secret_key    = "${var.secret_key}"
