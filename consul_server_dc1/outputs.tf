@@ -25,3 +25,7 @@ output "aws_iam_instance_profile" {
 output "ami_id" {
   value = "${module.consul_sofia.ami_id}"
 }
+
+output "private_ip" {
+  value = "${module.consul_sofia.private_ip}"
+}
