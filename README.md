@@ -1,4 +1,4 @@
-# This repo contains deployment of Consul cluster in AWS with Terraform over HTTP. 
+# This repo contains deployment of Consul cluster in AWS with Terraform. 
 ## Deployment uses [this](https://github.com/chavo1/aws-consul-terraform) module and could be done as follow:
 - 1 DCs with servers and client.
 - 2 DCs in [Multiple Datacenters](https://www.consul.io/docs/guides/datacenters.html) with servers and client.
