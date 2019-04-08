@@ -13,6 +13,7 @@ provider "aws" {
 # Terraform <= 0.11
 resource "aws_instance" "server" {
   ami                  = "${data.terraform_remote_state.server.ami_id[0]}"
+  count                = "${length(data.terraform_remote_state.server.private_ip)}"
   subnet_id            = "subnet-022ebfb6489c888e0"
   instance_type        = "${data.terraform_remote_state.server.instance_type[0]}"
   private_ip           = "172.31.32.${count.index + 11}"
