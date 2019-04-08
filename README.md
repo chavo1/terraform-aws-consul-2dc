@@ -14,7 +14,6 @@
 ## Joining of the consul agents is done with:
 - Cloud Auto-joining more info [HERE](https://www.consul.io/docs/agent/cloud-auto-join.html) and examples [HERE](https://github.com/hashicorp-modules/consul-auto-join-instance-role-aws)
   - | [iam_instance_profile](https://www.terraform.io/docs/providers/aws/r/instance.html#iam_instance_profile)
-- [-retry-join](https://www.consul.io/docs/agent/options.html#_retry_join)
 ## Prerequisites
 - Please install the following component:
   - | [Terraform](https://www.terraform.io/)
