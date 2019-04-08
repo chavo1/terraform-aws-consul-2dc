@@ -2,8 +2,8 @@
 ## Deployment uses [this](https://github.com/chavo1/aws-consul-terraform) module and could be done as follow:
 - 1 DCs with servers and client.
 - 2 DCs in [Multiple Datacenters](https://www.consul.io/docs/guides/datacenters.html) with servers and client.
- - | To spin up the second DC and client agents we use [Terraform Local Backend](https://www.terraform.io/docs/backends/types/local.html#example-reference) - we just reference the data. 
- - | For the count of the Consul servers in second DC we reference the private IPs of the primary DC. If you need different count just hardcode it in main.tf on "consul_server_dc2" directory - for example:
+  - | To spin up the second DC and client agents we use [Terraform Local Backend](https://www.terraform.io/docs/backends/types/local.html#example-reference) - we just reference the data. 
+  - | For the count of the Consul servers in second DC we reference the private IPs of the primary DC. If you need different count just hardcode it in main.tf on "consul_server_dc2" directory - for example:
 
  ``` 
  count = "${length(data.terraform_remote_state.server.private_ip)}"
