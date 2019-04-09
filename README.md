@@ -28,18 +28,16 @@ cd consul terraform-aws-consul-2dc/consul_server_dc1
 access_key = "< Your AWS Access_key >"
 secret_key = "< Your AWS Secret_key >"
 key_name = ""
-region = "us-east-1"
-instance_type = ""
-server_count = 3
-client_count = 1
-
-dcname = {
-    dc1 = "sofia"
-  }
 
 subnet = [
-    "Your AWS subnet"
+    "< Your AWS subnet >",
+    "< Your AWS subnet >"
 ]
+
+ami = {
+    server = "< Your AWS ami >"
+  }
+
 ```
 ### We can start with deploying process
 ```

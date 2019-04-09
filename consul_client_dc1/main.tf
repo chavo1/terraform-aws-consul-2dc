@@ -23,16 +23,19 @@ resource "aws_instance" "client" {
     Name   = "consul-client0${count.index + 1}"
     consul = "app"
   }
+
   // Our private key needed for connection to the clients 
   connection {
     user        = "ubuntu"
     private_key = "${file("~/.ssh/id_rsa")}"
   }
+
   // Copying needed scripts on the instance 
   provisioner "file" {
     source      = "scripts/"
     destination = "/tmp/"
   }
+
   // This is our provisioning scripts
   provisioner "remote-exec" {
     inline = [
