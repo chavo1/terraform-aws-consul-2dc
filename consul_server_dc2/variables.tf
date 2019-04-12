@@ -26,8 +26,13 @@ variable "instance_type" {
 variable "ami" {
   type = "map"
 
-  default = {}
+  default = {
+    "1.4.1" = "ami-082a5d4cb01ee3450"
+    "1.4.4" = "ami-00e9cbd23a90befc8"
+  }
 }
+
+variable "consul_version" {}
 
 variable "key_name" {}
 
