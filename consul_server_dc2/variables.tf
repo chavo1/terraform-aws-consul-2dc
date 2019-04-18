@@ -32,7 +32,9 @@ variable "ami" {
   }
 }
 
-variable "consul_version" {}
+variable "consul_version" {
+  default = "1.4.4"
+}
 
 variable "key_name" {}
 
